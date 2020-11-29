@@ -8,11 +8,20 @@ src = ['src/main.cc']
 
 executable('main', sources: src)
 
-e = executable(
+factorial = executable(
   'factorial_test',
   sources: 'tests/factorial_test.cc',
   dependencies: gtest_dep,
   include_directories: 'src'
   )
 
-test('test', e)
+test('test', factorial)
+
+combination = executable(
+  'combination_test',
+  sources: 'tests/combination_test.cc',
+  dependencies: gtest_dep,
+  include_directories: 'src'
+  )
+
+test('test', combination)
