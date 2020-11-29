@@ -25,3 +25,12 @@ combination = executable(
   )
 
 test('test', combination)
+
+prime = executable(
+  'prime_test',
+  sources: 'tests/prime_test.cc',
+  dependencies: gtest_dep,
+  include_directories: 'src'
+  )
+
+test('test', prime)
